@@ -32,7 +32,7 @@ namespace Token_Crypt
 
 
 
-                    string url = @"https://integrations.autosatnet.eu/api/" + username + @"/WAFPOL/positions?token=" + OUT;
+                    string url = @"https://custom.er/api/" + username + @"/position/positions?token=" + OUT;
 
                     HttpWebRequest request;
                     HttpWebResponse response;
@@ -58,8 +58,8 @@ namespace Token_Crypt
                             Body =
                             @"   Fehlercode " + (int)((HttpWebResponse)w.Response).StatusCode + " " + ((HttpWebResponse)w.Response).StatusCode +
                             "\n\nAnfrage an " + url + " fehlgeschalgen\n\n" +
-                            "P.P.H.U. Wafpol - 63284"
-                        }; mail.To.Add("MHahn@fixemer.com"); mail.To.Add("EVLehmann@fixemer.com"); mail.To.Add("JSchuler@fixemer.com");
+                            "..."
+                        }; mail.To.Add("user1@fixemer.com"); mail.To.Add("user2@fixemer.com"); mail.To.Add("user3@fixemer.com");
 
                         smtp.Send(mail);
                     }
